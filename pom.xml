@@ -25,6 +25,16 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
+					<cloudHubDeployment>
+						<uri>https://anypoint.mulesoft.com</uri>
+						<muleVersion>4.2.2</muleVersion>
+						<username>mesbnov2017</username>
+						<password>Mesbnov@2017</password>
+						<applicationName>testproject21</applicationName>
+						<environment>Sandbox</environment>
+			     		<workerType>Micro</workerType> 
+			       		<workers>1</workers>
+					</cloudHubDeployment>
 				</configuration>
 			</plugin>
 		</plugins>
