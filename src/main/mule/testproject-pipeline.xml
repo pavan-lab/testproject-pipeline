@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:salesforce="http://www.mulesoft.org/schema/mule/salesforce" xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="cd00971d-f865-4c91-9b49-9b7b87d6f1ee" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="testproject-pipelineFlow" doc:id="e9573110-d21d-4481-80f4-0c684b0ba28b" >
+		<http:listener doc:name="Listener" doc:id="5985b3a3-2b57-4036-b0fc-9fb917a74286" config-ref="HTTP_Listener_config" path="/test"/>
+		<set-payload value="test pipeline success............." doc:name="Set Payload" doc:id="89635627-b1a2-4a3d-a333-13e559a1aa87" />
+	</flow>
+</mule>
