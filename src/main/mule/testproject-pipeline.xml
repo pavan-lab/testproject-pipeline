@@ -9,6 +9,7 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	</http:listener-config>
 	<flow name="testproject-pipelineFlow" doc:id="e9573110-d21d-4481-80f4-0c684b0ba28b" >
 		<http:listener doc:name="Listener" doc:id="5985b3a3-2b57-4036-b0fc-9fb917a74286" config-ref="HTTP_Listener_config" path="/test"/>
+		<logger level="INFO" doc:name="Logger" doc:id="361f6841-0c99-491e-9f2c-fc0c0e7d25e4" message="received request.............."/>
 		<set-payload value="test pipeline success............." doc:name="Set Payload" doc:id="89635627-b1a2-4a3d-a333-13e559a1aa87" />
 	</flow>
 </mule>
